@@ -6267,6 +6267,10 @@ button.bg-dark:focus {
   border-radius: 50% !important;
 }
 
+.rounded-20 {
+  border-radius: 20% !important;
+}
+
 .rounded-pill {
   border-radius: 50rem !important;
 }
@@ -10010,13 +10014,24 @@ img::-moz-selection {
 }
 
 .btn-social {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.0rem;
+  width: 2.0rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   border-radius: 100%;
+}
+.btn-social-font{
+  display: inline;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+.btn-social-font:hover{
+  text-decoration: none;
 }
 
 #mainNav {
@@ -10107,7 +10122,7 @@ header.masthead .masthead-subheading {
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
-  font-size: 3.25rem;
+  font-size: 2.85rem;
   font-weight: 700;
   line-height: 3.25rem;
   margin-bottom: 2rem;
@@ -10247,7 +10262,7 @@ header.masthead .masthead-heading {
   position: relative;
   float: right;
   width: 100%;
-  padding: 0 20px 0 150px;
+  padding: 0 20px 0 95px;
   text-align: left;
 }
 .timeline > li .timeline-panel:before {
@@ -10271,9 +10286,9 @@ header.masthead .masthead-heading {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #e9ecef;
+  border: 5px solid #ffffff;
   border-radius: 100%;
-  background-color: #1070C4;
+  background-color: #ffffff;
 }
 .timeline > li .timeline-image h4 {
   font-size: 10px;
@@ -10282,7 +10297,7 @@ header.masthead .masthead-heading {
 }
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
-  padding: 0 20px 0 100px;
+  padding: 0 20px 0 95px;
   text-align: left;
 }
 .timeline > li.timeline-inverted > .timeline-panel:before {
