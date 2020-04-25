@@ -53,4 +53,21 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
+
+    function updateName() {
+        if (($("#myname").text() === "YuRong Zeng.") && ($("#myname").css('opacity') == 1))
+        {
+            $("#myname").animate({opacity: 0}, 700);      
+            setTimeout(function() {$("#myname").text('曾昱榮.');$("#myname").animate({opacity: 1});}, 1000);         
+        }
+        
+        else if (($("#myname").text() === "曾昱榮.") && ($("#myname").css('opacity') == 1))
+        {
+            $("#myname").animate({opacity: 0}, 700);
+            setTimeout(function() {$("#myname").text('YuRong Zeng.');$("#myname").animate({opacity: 1});}, 1000);  
+            
+        }
+        
+    };
+    window.setInterval(updateName,5000);
 })(jQuery); // End of use strict

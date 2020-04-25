@@ -13,8 +13,6 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -35,9 +33,8 @@
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">_____ Hello World</div>
-                <div class="masthead-heading">I am YuRong Zeng.<br>I am a software engineer.</div>
-                
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#Expertise">Scroll down</a>
+                <div class="masthead-heading">I am <p id="myname">YuRong Zeng.</p><br>I am a software engineer.</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#Information">Scroll down</a>
             </div>
         </header>
         <!-- Information-->
@@ -48,7 +45,9 @@
                     <img class="rounded-20 img-fluid" src="assets/img/me.jpg" alt="" width= "120px" height="120px"/>
                     <br>
                     <br>
-                    <h3 class= "section-subheading text-muted" ></h3>
+                    <h3 class= "section-subheading text-muted" >我熱衷於資訊科學，平時興趣是羽球、棒球，現居於新竹市</h3>
+                    <h5 style="text-align: center; width: 60%; margin: 0 20% 0 20%;">Phone: +886-978070019</h5>
+                    <br>
                     <h5 style="text-align: center; width: 60%; margin: 0 20% 0 20%;">Email: t3837735@gmail.com</h5>
                 </div>
                 <br>
@@ -158,7 +157,7 @@
                                 ><div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/baseball.jpg" alt=""
+                                <img class="img-fluid" src="assets/img/portfolio/baseball_type/baseball.jpg" alt=""
                             /></a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">棒球球種分析</div>
@@ -259,14 +258,22 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">應用資料探勘於棒球球種分析</h2>
+                                    <p class="item-intro text-muted">中山資工專題展 佳作/曾昱榮 黃柏勳 紀儒達/指導教授 張玉盈</p>
+                                    <p>我們的研究動機為，欲打造一款App，可拍攝棒球投手投球的影片，手機直接辨識出該球種並且給予該球的變化幅度、球速，我們希望可以藉由科技給年輕的選手更數據、科學化的訓練。</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/baseball_type/acc_chart.png" alt="" />
+                                    <p>我們的實作方法首先為蒐集網路上職棒選手投球的影片，並以我們手動標示每個影片的棒球飛行軌跡座標、球種，並由程式計算出每球每單位時間的橫向縱向位移量及加速度，各球種的分佈如上圖，
+                                        我們透過橫向縱向加速度再借助k-means分群演算法，可大致分類為三大區塊，如下圖。依三大類的棒球飛行軌跡，伸卡球、指叉球、變速球較容易混淆，因此被分為一類，而曲球和滑球則被分為另一類，快速球則單獨一類。</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/baseball_type/k_means1.png" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/baseball_type/flow_chart.png" alt="" />
+                                    <p>為了細分各球種，我們再次針對曲球、滑球進行k-means演算法分群，以分辨該兩種球種。而伸卡球、指叉球、變速球則再根據球速差距分辨出該三種球種，我們的辨識流程圖如上圖。</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/baseball_type/template.png" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/baseball_type/match.png" alt="" />
+                                    <p>而辨識球種階段，利用程式辨識飛行軌跡座標也是相當重要的一環，我們首先對影片進行二值化，再藉由從訓練資料中挑出棒球形狀樣本進行圖形比對，進而從二值化圖片中精準辨識出棒球的所在位置，如上圖所示。</p>
+                                    <p>最終根據程式標示出的座標，進行加速度運算，由該加速度尋找k-means分群最靠近之重心，再藉由球速的差異進行篩選，即可辨識出球種。而最終testing data之準確度約達八成</p>
+                                    
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
+                                        <li>Date: January 2017</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
@@ -286,14 +293,12 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">ComCNN: 應用基於CNN的Seq2Seq model於程式碼註解生成之研究</h2>
+                                    <p class="item-intro text-muted">指導教授：黃慶育 ｜開源程式碼：https://github.com/yurong0404/ComCNN</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ComCNN.jpg" alt="" />
+                                    <p>xxx</p>
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Explore</li>
-                                        <li>Category: Graphic Design</li>
+                                        <li>Date: August 2020</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
@@ -313,14 +318,23 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">英文文章簡化工具</h2>
+                                    <p class="item-intro text-muted">以較簡單的同義字替代文章中困難的單字，以降低非英文母語者閱讀文章的困難</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/simple_paragraph/demo.png" alt="" />
+                                    <p>為了替換困難字，首先我們必須先從文章中挑出困難的字，符合困難字須滿足兩個條件，第一是該單字超出牛津辭典的5000單字庫 [1]，第二是該單字在Linggle網站 [2](英文搭配詞統計資料庫)統計次數不超過150萬次。
+                                        而挑出困難字後，替換的字必須要夠簡單，也必須和該字的詞義足夠接近，因此亦必須滿足兩個條件。第一是該字必須和困難字在GloVe的word vector [3]相似度超過0.6，第二是該字在Linggle的出現次數
+                                        必須大於120萬且次數為困難字的兩倍以上。若該兩個條件都無法滿足，則程式會再從power thesaurus [4](搜尋同義字網站)，從詞義較符合的字中進行第二項條件的比對，滿足條件的簡單字才能夠替換困難字。
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/simple_paragraph/evaluation.png" alt="" />
+                                    <p>而替換過困難字後，我們使用Flesch Kincaid Test作為文章難易度的度量標準，測量結果顯示使用我們的方法替換困難字後，文章有確實在Flesch Kincaid Test [5]中展現成效，如上圖。</p>
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Finish</li>
-                                        <li>Category: Identity</li>
+                                        <li>[1] http://www.coachmindmap.com/oxford5000cefr.pdf</li>
+                                        <li>[2] https://linggle.com/</li>
+                                        <li>[3] https://nlp.stanford.edu/projects/glove/</li>
+                                        <li>[4] https://www.powerthesaurus.org/</li>
+                                        <li>[5] https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests</li>
+                                        <br>
+                                        <li>Date: June 2019</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
@@ -411,14 +425,13 @@
                 </div>
             </div>
         </div>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
