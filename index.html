@@ -8,7 +8,7 @@
         <title>YuRong</title>
         <link rel="icon" type="image/x-icon" href="assets/img/ico.png" />
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -121,8 +121,9 @@
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted">
-                                    &#8227 熟悉藍芽BR/EDR Protocol<br>
-                                    &#8227 維護藍芽韌體 (耳機、dongle)
+                                    &#8227 熟悉經典藍芽(BR/EDR) Protocol<br>
+                                    &#8227 開發/維護 藍芽SoC MAC層韌體<br>
+                                    &#8227 藍芽SoC MAC層的troubleshooting工作<br>
                                 </p>
                             </div>
                         </div>
@@ -135,23 +136,28 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Expertise</h2>
-                    <h3 class="section-subheading text-muted">Information topics that I major in and interested in.<br>在學習階段，我所擅長且熱愛的領域</h3>
+                    <h3 class="section-subheading text-muted">The domain I familiar with<br>擅長的領域</h3>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-language fa-stack-1x fa-inverse"></i></span>
                         <h4 class="my-3">Natural Language</h4>
                         <p class="text-muted">透過程式處理人類的語言，進行斷詞、理解詞，語法和語義的分析，進一步開發語言相關的應用</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-connectdevelop fa-stack-1x fa-inverse"></i></span>
                         <h4 class="my-3">Deep Learning</h4>
                         <p class="text-muted">利用Keras、TensorFlow建構類神經網路、訓練模型，並達成各領域的相關應用，包含圖片分類、機器翻譯、風格轉換等</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-code fa-stack-1x fa-inverse"></i></span>
                         <h4 class="my-3">Unix Programming</h4>
                         <p class="text-muted">熟悉撰寫Unix系統的相關程式，包含process/thread control、network I/O、signals、組合語言等等</p>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-bluetooth fa-stack-1x fa-inverse"></i></span>
+                        <h4 class="my-3">Bluetooth Knowledge</h4>
+                        <p class="text-muted">熟悉藍芽MAC層相關知識、BR/EDR和LE的controller protocol。解決藍芽異常斷線、音訊傳輸延遲等問題</p>
                     </div>
                 </div>
             </div>
@@ -258,7 +264,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 text-lg-right">Copyright © YuRong 2020</div>
+                    <div class="col-lg-6 text-lg-right">Copyright © YuRong 2021</div>
                     <div class="col-lg-6 text-lg-left">Design by Start Bootstrap</div>
                 </div>
             </div>
@@ -270,7 +276,7 @@
                     <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">應用資料探勘於棒球球種分析</h2>
@@ -305,13 +311,22 @@
                     <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">ComCNN: 應用基於CNN的Seq2Seq model於程式碼註解生成之研究</h2>
+                                    <h3>ComCNN: Automatic generation of source code comments using convolutional neural networks</h3>
                                     <p class="item-intro text-muted">指導教授：黃慶育 ｜開源程式碼：https://github.com/yurong0404/ComCNN</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ComCNN.jpg" alt="" />
-                                    <p>xxx</p>
+                                    <h4>動機</h4>
+                                    <p>此研究目標為節省程式開發人員撰寫註解的時間成本，亦幫助程式維護人員透過自動化工具生成之註解快速理解程式的行為。</p>
+                                    <h4>實驗方法</h4>
+                                    <p>針對camelCase及snake_case之變數使用變數名稱切割方法，有效解決訓練資料中程式碼變數名稱種類過多，且變數重複性過低之問題。在模型架構方面，本方法基於seq2seq架構，將CNN和Bi-LSTM模型套用於encoder，encoder用途為解析程式碼之特徵和整段程式碼之行為，而decoder則利用encoder所解析之資訊進行註解預測。此模型利用CNN可降維之特性，幫助行數較長之程式碼獲得品質較佳的註解。此模型亦利用Bi-LSTM可學習雙向記憶之特性，幫助學習程式碼之行為。模型架構如下圖。而註解預測演算法我們使用beam search演算法</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ComCNN/Model-Architecture-CNNBILSTM-LSTM.png" alt="" />
+                                    <h4>實驗結果 - BLEU3分數比較</h4>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ComCNN/BLEU3.png" alt="" />
+                                    <h4>實驗結果 - ComCNN註解預測</h4>
+                                    <p class="mb-2">Beam search (k = 3): Convert to an hexadecimal string</p>
+                                    <p class="mb-2">Beam search (k = 5): Convert a byte array to hexadecimal</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ComCNN/code.png" alt="" />
                                     <ul class="list-inline">
                                         <li>Date: August 2020</li>
                                     </ul>
@@ -330,7 +345,7 @@
                     <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">英文文章簡化工具</h2>
