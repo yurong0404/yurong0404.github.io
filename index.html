@@ -121,9 +121,10 @@
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted">
-                                    &#8227 熟悉經典藍芽(BR/EDR) Protocol<br>
-                                    &#8227 開發/維護 藍芽SoC MAC層韌體<br>
-                                    &#8227 藍芽SoC MAC層的troubleshooting工作<br>
+                                    &#8227 藍芽SoC MAC FW開發<br>
+                                    &#8227 2.4GHz私有通訊協定開發<br>
+                                    &#8227 ⚡藍芽韌體功耗控制<br>
+                                    &#8227 藍芽/WiFi共存機制開發<br>
                                 </p>
                             </div>
                         </div>
@@ -136,7 +137,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Expertise</h2>
-                    <h3 class="section-subheading text-muted">The domain I familiar with<br>擅長的領域</h3>
+                    <h3 class="section-subheading text-muted"><br></h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-6">
@@ -212,18 +213,18 @@
                             </div>
                         </div>
                     </div>
-                    <!--
+                    
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4"
                                 ><div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.jpg" alt=""
+                                <img class="img-fluid" src="assets/img/portfolio/bluetooth.jpg" alt=""
                             /></a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-heading">藍芽MAC韌體之開發測試</div>
+                                <div class="portfolio-caption-subheading text-muted">Realtek Bluetooth SoC</div>
                             </div>
                         </div>
                     </div>
@@ -233,14 +234,15 @@
                                 ><div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/05-thumbnail.jpg" alt=""
+                                <img class="img-fluid" src="assets/img/portfolio/proprietary_2p4g.png" alt=""
                             /></a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">Realtek 2.4GHz私有通訊協定開發</div>
+                                <div class="portfolio-caption-subheading text-muted">Realtek 2.4GHz Protocol</div>
                             </div>
                         </div>
                     </div>
+                    <!--
                     <div class="col-lg-4 col-sm-6">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6"
@@ -376,7 +378,6 @@
         </div>
         
         <!-- Modal 4-->
-        <!--
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -385,15 +386,19 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">藍牙MAC韌體</h2>
+                                    <p class="item-intro text-muted"> </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/bluetooth_mac/bluetooth_mac.png" alt="" />
+                                    <h4>藍牙MAC韌體開發</h4>
+                                    <p>參與BREDR（經典藍牙）/LE（低功耗藍牙）之MAC層韌體開發測試。其中包含廠內壓力測試以及客戶端TWS（真無線藍牙耳機）、鍵盤滑鼠、藍牙手錶、藍牙dongle等產品的trouble shooting</p>
+                                    <h4>低功耗模式</h4>
+                                    <p>藍牙SoC的低功耗特性尤其重要，負責各瑞昱藍牙SoC MAC的功耗控制的韌體開發維護</p>
+                                    <h4>藍牙、Wifi共存機制</h4>
+                                    <p>負責開發維護藍牙模組與Wifi模組共存的機制，包含制定藍牙與Wifi模組之間的溝通機制以及韌體開發維護。可達到單晶片同時具備藍牙與Wifi功能，訊號運作於相同頻段也互不干擾。</p>
+                                    <h4>MAC韌體系統配置</h4>                                        
+                                    <p>負責MAC韌體的建置。包含記憶體配置，firmware編譯，linker script配置等等</p>
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Lines</li>
-                                        <li>Category: Branding</li>
+                                        <li>From October 2020</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
@@ -403,9 +408,7 @@
                 </div>
             </div>
         </div>
-        -->
         <!-- Modal 5-->
-        <!--
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -414,15 +417,14 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Southwest</li>
-                                        <li>Category: Website Design</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Realtek 2.4GHz無線通訊</h2>
+                                    <p class="item-intro text-muted">一個具有高度彈性的無線通訊機制，使其擁有更優於藍牙的高更新率、低延遲、低耗電之傳輸。其產品包含Gaming無線滑鼠、Gaming無線鍵盤，及電子標籤等等</p>
+                                    <h4>Realtek 2.4GHz Proprietary Protocol功能設計</h4>
+                                    <p>負責Realtek 2.4GHz Proprietary Protocol新功能設計，以及其韌體開發維護。特別致力於提高更新率之研發，突破更新率的極限，使Gaming滑鼠的更新率可由4K突破至8K。</p>
+                                    <h4>Realtek 2.4GHz Proprietary自動化測試之開發</h4>
+                                    <p>利用pytest(一項基於python的測試框架)開發測試腳本，用於驗證Realtek 2.4G Proprietary之MAC Hardware功能</p>
+                                    <h4>Realtek 2.4GHz Proprietary和Bluetooth共存機制</h4>
+                                    <p>負責Realtek 2.4GHz和Bluetooth共存之研發，使Realtek 2.4GHz Protocol和藍牙連線可同時運作</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
@@ -431,7 +433,6 @@
                 </div>
             </div>
         </div>
-        -->
         <!-- Modal 6-->
         <!--
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
